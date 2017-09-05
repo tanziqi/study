@@ -53,12 +53,12 @@ namespace DataStruct.TextSearch
         {
             int i = 0, j = 0;
             int txtlen = txt.Length;
-            for (; i < txtlen && j < _patlen; i++)
+            for (; i < txtlen && j < _patlen; i++)//i不回退
             {
+                j = _dfa[j, txt[i]];//更新状态机
                 Form1.ActiveForm.Text += "i:" + i.ToString();
-                j = _dfa[j, txt[i]];//更新状态机, 可以从调试信息中看到i是不回退的.
                 Form1.ActiveForm.Text += "j:" + j.ToString();
-                Form1.ActiveForm.Text += " ";
+                Form1.ActiveForm.Text += "   ";
             }
             return (j == _patlen) ? i - j : 0;//当j等于模式串时, 也就说明状态机已经到达终点了
         }

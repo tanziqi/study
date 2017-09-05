@@ -56,11 +56,14 @@ namespace DataStruct
             rbtree.Insert(new RBNode<int, string>(6, "6"));
             rbtree.Insert(new RBNode<int, string>(7, "7"));
             rbtree.Insert(new RBNode<int, string>(8, "8"));
-
-            rbtree.Insert(new RBNode<int, string>(12, "12"));
-            rbtree.Insert(new RBNode<int, string>(11, "11"));
-            rbtree.Insert(new RBNode<int, string>(10, "10"));
             rbtree.Insert(new RBNode<int, string>(9, "9"));
+            rbtree.Insert(new RBNode<int, string>(10, "10"));
+            rbtree.Insert(new RBNode<int, string>(11, "11"));
+            rbtree.Insert(new RBNode<int, string>(12, "12"));
+            rbtree.Insert(new RBNode<int, string>(13, "13"));
+            rbtree.Insert(new RBNode<int, string>(14, "14"));
+            rbtree.Insert(new RBNode<int, string>(15, "15"));
+            rbtree.Insert(new RBNode<int, string>(16, "16"));
 
             rbtree.Erase(2);
             //RBNode<int, string> man = rbtree.Find(6);
@@ -73,7 +76,7 @@ namespace DataStruct
             RabinKarp rk = new RabinKarp("ziqi");
             int ret = rk.Search("woshitan09tanziqi940");
             button1.Text = ret.ToString();
-
+#else
             //dfa版kmp算法
             DFA_KMP kmp = new DFA_KMP("abcde");
             button1.Text = kmp.Search("abcdfabcde").ToString();
@@ -87,7 +90,7 @@ namespace DataStruct
                                              //examplei
                                                      //examplei
                                                       //examplei
-#else
+//#else
             BoyerMoore bm = new BoyerMoore("0000");
             button1.Text = bm.Search("0589000c10000").ToString();
                                     //aabcaab
